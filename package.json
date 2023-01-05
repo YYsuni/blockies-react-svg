@@ -1,6 +1,6 @@
 {
 	"name": "blockies-react-svg",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Blockies react svg function component, blocky identicons, address-unique Ethereum avatar.",
 	"main": "BlockieSvg.tsx",
 	"devDependencies": {
