@@ -39,7 +39,7 @@ import BlockiesSvgSync from 'blockies-react-svg/BlockieSvgSync.tsx'
 
 Use base64 url:
 ```tsx
-import BlockiesSvgSync from 'blockies-react-svg/makeBlockiesUrl.ts'
+import makeBlockiesUrl from 'blockies-react-svg/makeBlockiesUrl.ts'
 
 <img
   src={makeBlockiesUrl(address)}
