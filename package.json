@@ -15,7 +15,9 @@
 	},
 	"files": [
 		"blockie.ts",
-		"BlockieSvg.tsx"
+		"BlockieSvg.tsx",
+		"BlockieSvgSync.tsx",
+		"makeBlockiesUrl.ts"
 	],
 	"license": "MIT",
 	"author": "Suni",
