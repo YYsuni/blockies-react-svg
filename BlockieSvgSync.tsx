@@ -1,3 +1,4 @@
+import React from 'react'
 import { BlockiesOptions, buildOpts, createImageData } from './blockies'
 
 const store: Record<string, { opts: BlockiesOptions; imageData: number[] }> = Object.create(null)
