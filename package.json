@@ -14,7 +14,7 @@
 		"react-dom": ">=16.8.0"
 	},
 	"files": [
-		"blockie.ts",
+		"blockies.ts",
 		"BlockieSvg.tsx",
 		"BlockieSvgSync.tsx",
 		"makeBlockiesUrl.ts"
