@@ -6,16 +6,6 @@
 	"type": "module",
 	"module": "dist/es/BlockiesSvg.js",
 	"brower": "dist/es/BlockiesSvg.js",
-	"exports": {
-		"node": {
-			"require": "./dist/cjs/BlockiesSvg.js",
-			"import": "./dist/cjs/BlockiesSvg.js"
-		},
-		"package.json": "./package.json",
-		"default": "./dist/es/BlockiesSvg.js",
-		"dist": "./dist",
-		"src": "./src"
-	},
 	"scripts": {
 		"prepare": "husky install",
 		"prebuild": "npm run clean",
