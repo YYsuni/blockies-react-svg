@@ -8,6 +8,15 @@ You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16
 
 (the address will auto toLowerCase until set `caseSensitive` property)
 
+## Todo
+- [x] ts component
+- [x] base64 url
+- [x] js compile
+- [ ] svg mirror optmization (reduce image size)
+- [ ] svg polygon optmization (reduce image size)
+- [ ] more shapes
+- [ ] different rand algorithm
+
 ## Installation
 
 ```bash
