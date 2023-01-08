@@ -41,10 +41,7 @@
 		"react-dom": ">=16.8.0"
 	},
 	"files": [
-		"blockies.ts",
-		"BlockieSvg.tsx",
-		"BlockieSvgSync.tsx",
-		"makeBlockiesUrl.ts",
+		"src",
 		"dist"
 	],
 	"license": "MIT",
