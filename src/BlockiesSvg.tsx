@@ -4,11 +4,13 @@ import { BlockiesOptions, buildOpts, createImageData } from './blockies'
 const store: Record<string, { opts: BlockiesOptions; imageData: number[] }> = Object.create(null)
 
 export default function BlockiesSvg(
-	props: { address: string; size?: number; scale?: number } & React.SVGProps<SVGSVGElement>
+	props: { address: string; size?: number; scale?: number; caseSensitive?: boolean } & React.SVGProps<SVGSVGElement>
 ) {
-	const { address, size = 8, ...rest } = props
+	let { address, size = 8, caseSensitive = false, ...rest } = props
 	const [opts, setOpts] = useState<BlockiesOptions | null>(null)
 	const [imageData, setImageData] = useState<number[] | null>(null)
+
+	if (!caseSensitive) address = address.toLowerCase()
 
 	useEffect(() => {
 		if (address) {
