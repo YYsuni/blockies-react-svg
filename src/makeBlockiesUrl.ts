@@ -1,9 +1,9 @@
 import React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
-import BlockieSvgSync from './BlockieSvgSync'
+import BlockiesSvgSync from './BlockiesSvgSync'
 
 export default function makeBlockiesUrl(address: string) {
-	const blokiesMarkup = ReactDOMServer.renderToStaticMarkup(React.createElement(BlockieSvgSync, { address }))
+	const blokiesMarkup = ReactDOMServer.renderToStaticMarkup(React.createElement(BlockiesSvgSync, { address }))
 
 	return `data:image/svg+xml;base64,${window.btoa(blokiesMarkup)}`
 }

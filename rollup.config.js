@@ -6,35 +6,19 @@ import external from 'rollup-plugin-peer-deps-external'
 const plugins = [external(), typescript(), nodeResolve(), commonjs()]
 
 /** @type {import('rollup').InputOption} */
-export default [
-	{
-		input: 'BlockieSvg.tsx',
-		output: {
-			name: 'BlockieSvg.js',
-			dir: 'dist',
-			format: 'umd',
+export default {
+	input: ['src/BlockiesSvg.tsx', 'src/BlockiesSvgSync.tsx', 'src/makeBlockiesUrl.ts'],
+	output: [
+		{
+			dir: 'dist/cjs',
+			format: 'cjs',
 			sourcemap: true
 		},
-		plugins
-	},
-	{
-		input: 'BlockieSvgSync.tsx',
-		output: {
-			name: 'BlockieSvgSync.js',
-			dir: 'dist',
-			format: 'umd',
+		{
+			dir: 'dist/es',
+			format: 'es',
 			sourcemap: true
-		},
-		plugins
-	},
-	{
-		input: 'makeBlockiesUrl.ts',
-		output: {
-			name: 'makeBlockiesUrl.js',
-			dir: 'dist',
-			format: 'umd',
-			sourcemap: true
-		},
-		plugins
-	}
-]
+		}
+	],
+	plugins
+}

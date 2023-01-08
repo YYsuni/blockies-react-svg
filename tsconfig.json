@@ -1,15 +1,16 @@
 {
 	"compilerOptions": {
+		"strict": true,
 		"target": "ES6",
 		"skipLibCheck": true,
 		"esModuleInterop": false,
 		"allowSyntheticDefaultImports": true,
-		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"isolatedModules": true,
-		"noEmit": true,
-		"jsx": "react-jsx"
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"declaration": true
 	}
 }
