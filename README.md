@@ -16,24 +16,38 @@ Use react fc:
 
 ```tsx
 import BlockiesSvg from 'blockies-react-svg'
+// or use tsx directly:
+// import BlockiesSvg from 'blockies-react-svg/src/BlockiesSvg.tsx'
 
-;<BlockiesSvg address={address} className='classname' style={styles} />
+<BlockiesSvg 
+  address={address}
+  className='classname'
+  style={styles} 
+  />
 ```
 
 Use react sync component:
 
 ```tsx
-import BlockiesSvgSync from 'blockies-react-svg/BlockiesSvgSync.tsx'
+import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
+// or use tsx directly:
+// import BlockiesSvgSync from 'blockies-react-svg/src/BlockiesSvgSync.tsx'
 
-;<BlockiesSvgSync address={address} className='classname' style={styles} />
+<BlockiesSvgSync 
+  address={address} 
+  className='classname'
+  style={styles} 
+  />
 ```
 
 Use base64 url:
 
 ```tsx
-import makeBlockiesUrl from 'blockies-react-svg/makeBlockiesUrl.ts'
+import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
+// or use ts directly:
+// import makeBlockiesUrl from 'blockies-react-svg/src/makeBlockiesUrl.ts'
 
-;<img src={makeBlockiesUrl(address)} />
+<img src={makeBlockiesUrl(address)} />
 ```
 
 ## Why SVG?
