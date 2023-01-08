@@ -3,14 +3,28 @@
 	"version": "0.0.5",
 	"description": "Blockies react svg function component, blocky identicons, address-unique Ethereum avatar, svg base64 url.",
 	"main": "BlockieSvg.tsx",
+	"type": "module",
+	"scripts": {
+		"prepare": "husky install",
+		"prebuild": "npm run clean",
+		"build": "rollup -c",
+		"clean": "rm -rf dist",
+		"format": "prettier --write .",
+		"prepublishOnly": "npm run build"
+	},
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "^24.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.1",
 		"@types/react": "^18.0.26",
 		"@types/react-dom": "^18.0.10",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.1.0",
 		"prettier": "^2.8.2",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"rollup": "^3.9.1",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-typescript2": "^0.34.1"
 	},
 	"peerDependencies": {
 		"react": ">=16.8.0",
@@ -20,7 +34,8 @@
 		"blockies.ts",
 		"BlockieSvg.tsx",
 		"BlockieSvgSync.tsx",
-		"makeBlockiesUrl.ts"
+		"makeBlockiesUrl.ts",
+		"dist"
 	],
 	"license": "MIT",
 	"author": "Suni",
@@ -39,8 +54,5 @@
 	],
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown"
-	},
-	"scripts": {
-		"prepare": "husky install"
 	}
 }
