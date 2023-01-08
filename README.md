@@ -12,6 +12,7 @@ You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16
 - [x] ts component
 - [x] base64 url
 - [x] js compile
+- [ ] demo display (github pages)
 - [ ] svg mirror optmization (reduce image size)
 - [ ] svg polygon optmization (reduce image size)
 - [ ] more shapes
