@@ -6,7 +6,7 @@ You can have responsive width and height without rerendering because of SVG prop
 
 You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16kb).
 
-(the address will auto toLowerCase until set `caseSensitive` property)
+> the address will auto toLowerCase until set `caseSensitive` property.
 
 ## Todo
 - [x] ts component
