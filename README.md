@@ -30,6 +30,7 @@ Use react fc:
 import BlockiesSvg from 'blockies-react-svg'
 // or use tsx directly:
 // import BlockiesSvg from 'blockies-react-svg/src/BlockiesSvg.tsx'
+// (file path may be change, please check it when error happen.)
 
 <BlockiesSvg 
   address={address}
@@ -44,6 +45,7 @@ Use react sync component:
 import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
 // or use tsx directly:
 // import BlockiesSvgSync from 'blockies-react-svg/src/BlockiesSvgSync.tsx'
+// (file path may be change, please check it when error happen.)
 
 <BlockiesSvgSync 
   address={address} 
@@ -58,6 +60,7 @@ Use base64 url:
 import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
 // or use ts directly:
 // import makeBlockiesUrl from 'blockies-react-svg/src/makeBlockiesUrl.ts'
+// (file path may be change, please check it when error happen.)
 
 <img src={makeBlockiesUrl(address)} />
 ```
