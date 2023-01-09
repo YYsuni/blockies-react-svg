@@ -4,7 +4,7 @@ Blockies react svg function component, blocky identicons, address-unique Ethereu
 
 You can have responsive width and height without rerendering because of SVG properties. meanwhile, it will store the result.
 
-You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16kb).
+You also can use base64 url, it is smaller(~3kb) than ethereum-blockies-base64(~16kb).
 
 > the address will auto toLowerCase until set `caseSensitive` property.
 
@@ -17,6 +17,7 @@ You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16
 - [x] base64 url
 - [x] js compile
 - [x] demo display (github pages)
+- [ ] remove react-dom/server dependence (~70kb bundle size)
 - [ ] svg mirror optmization (reduce image size)
 - [ ] svg polygon optmization (reduce image size)
 - [ ] more shapes
@@ -28,7 +29,7 @@ You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16
 $ npm i blockies-react-svg
 ```
 
-Use react fc:
+### 1. Use React FC:
 
 ```tsx
 import BlockiesSvg from 'blockies-react-svg'
@@ -43,7 +44,7 @@ import BlockiesSvg from 'blockies-react-svg'
   />
 ```
 
-Use react sync component:
+### 2. Use React Sync Component:
 
 ```tsx
 import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
@@ -58,7 +59,7 @@ import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
   />
 ```
 
-Use base64 url:
+### 3. Use Base64 URL:
 
 ```tsx
 import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
