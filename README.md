@@ -8,11 +8,15 @@ You also can use base64 url, it is smaller(3kb) than ethereum-blockies-base64(16
 
 > the address will auto toLowerCase until set `caseSensitive` property.
 
+![Sample of generated blockies](sample.png "Blockies")
+
+[**Demo of React SPA**](https://yysuni.github.io/blockies-react-svg/) (you can read the code in the `gh-pages` branch)
+
 ## Todo
 - [x] ts component
 - [x] base64 url
 - [x] js compile
-- [ ] demo display (github pages)
+- [x] demo display (github pages)
 - [ ] svg mirror optmization (reduce image size)
 - [ ] svg polygon optmization (reduce image size)
 - [ ] more shapes
