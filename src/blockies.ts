@@ -27,9 +27,9 @@ function createColor() {
 	//saturation is the whole color spectrum
 	const h = Math.floor(rand() * 360)
 	//saturation goes from 40 to 100, it avoids greyish colors
-	const s = (rand() * 60 + 40).toFixed(4) + '%'
+	const s = (rand() * 60 + 40).toFixed(1) + '%'
 	//lightness can be anything from 0 to 100, but probabilities are a bell curve around 50%
-	const l = ((rand() + rand() + rand() + rand()) * 25).toFixed(4) + '%'
+	const l = ((rand() + rand() + rand() + rand()) * 25).toFixed(1) + '%'
 
 	return 'hsl(' + h + ',' + s + ',' + l + ')'
 }

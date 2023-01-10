@@ -27,14 +27,26 @@ export default function BlockiesSvgSync(
 		<svg {...rest} width={width} height={width} viewBox={`0 0 ${width} ${width}`} xmlns='http://www.w3.org/2000/svg'>
 			<rect width={width} height={width} fill={opts.bgcolor} />
 
-			{imageData?.map((value, i) => {
-				const row = (i % size) * opts!.scale
-				const col = Math.floor(i / size) * opts!.scale
-				const color = value === 1 ? opts!.color : opts!.spotcolor
+			<g fill={opts.color}>
+				{imageData?.map((value, i) => {
+					if (value === 1) {
+						const row = (i % size) * opts!.scale
+						const col = Math.floor(i / size) * opts!.scale
 
-				if (value)
-					return <rect key={`${address}-${i}`} x={row} y={col} width={opts!.scale} height={opts!.scale} fill={color} />
-			})}
+						return <rect key={`${address}-${i}`} width={opts!.scale} height={opts!.scale} x={row} y={col} />
+					}
+				})}
+			</g>
+			<g fill={opts.spotcolor}>
+				{imageData?.map((value, i) => {
+					if (value === 2) {
+						const row = (i % size) * opts!.scale
+						const col = Math.floor(i / size) * opts!.scale
+
+						return <rect key={`${address}-${i}`} width={opts!.scale} height={opts!.scale} x={row} y={col} />
+					}
+				})}
+			</g>
 		</svg>
 	)
 }
