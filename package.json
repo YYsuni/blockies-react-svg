@@ -1,7 +1,7 @@
 {
 	"name": "blockies-react-svg",
 	"version": "0.0.9",
-	"description": "Blockies react svg function component, blocky identicons, address-unique Ethereum avatar, svg base64 url.",
+	"description": "Blockies react svg function component, blocky identicons, address-unique ethereum avatar, svg base64 url, nodejs generation.",
 	"main": "dist/cjs/BlockiesSvg.js",
 	"type": "module",
 	"module": "dist/es/BlockiesSvg.js",
@@ -55,7 +55,8 @@
 		"fc",
 		"svg",
 		"typescript",
-		"base64"
+		"base64",
+		"nodejs"
 	],
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown"

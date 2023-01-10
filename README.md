@@ -17,7 +17,8 @@ You also can use base64 url, it is smaller(~2kb) than the canvas size(~16kb).(8x
 - [x] base64 url
 - [x] js compile
 - [x] demo display (github pages)
-- [x] remove react-dom/server dependence (~70kb bundle size)
+- [x] pure base64 (remove react-dom/server dependence, -70kb bundle size)
+- [ ] support nodejs
 - [ ] svg mirror optmization (reduce image size)
 - [ ] svg polygon optmization (reduce image size)
 - [ ] more shapes
@@ -74,6 +75,6 @@ import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
 
 Canvas render doesn't support arbitrary size or other customized styles.
 
-SVG is the better experience.
+SVG is the better experience, because of the infinite resolution.
 
 SVG base64 file size is smaller than canvas.
