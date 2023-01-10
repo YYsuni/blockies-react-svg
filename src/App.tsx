@@ -20,7 +20,7 @@ function App() {
 			<div className='mx-auto mt-8 flex flex-col gap-y-6 p-6'>
 				<ul className='flex justify-center gap-6'>
 					{ADDRESSES.map(a => (
-						<li className='max-w-[160px] flex-1'>
+						<li key={a} className='max-w-[160px] flex-1'>
 							<div>
 								<BlockiesSvg address={a} className='h-full w-full rounded-lg' />
 							</div>
@@ -31,7 +31,7 @@ function App() {
 				</ul>
 				<ul className='flex justify-center gap-6'>
 					{ADDRESSES.map(a => (
-						<li className='max-w-[160px] flex-1'>
+						<li key={a} className='max-w-[160px] flex-1'>
 							<div>
 								<BlockiesSvgSync address={a} className='h-full w-full rounded-lg' />
 							</div>
@@ -41,15 +41,23 @@ function App() {
 					))}
 				</ul>
 				<ul className='flex justify-center gap-6'>
-					{ADDRESSES.map(a => (
-						<li className='max-w-[160px] flex-1'>
-							<div>
-								<img src={makeBlockiesUrl(a)} className='h-full w-full rounded-lg' />
-							</div>
-							<div className='two-lines mt-4 w-full break-all text-center font-mono text-xs text-slate-400'>{a}</div>
-							<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>{`makeBlockiesUrl`}</div>
-						</li>
-					))}
+					{ADDRESSES.map(a => {
+						const url = makeBlockiesUrl(a)
+						const fileSizeInByte = Math.ceil(url.length / 4) * 3
+
+						return (
+							<li key={a} className='max-w-[160px] flex-1'>
+								<div>
+									<img src={url} className='h-full w-full rounded-lg' />
+								</div>
+								<div className='two-lines mt-4 w-full break-all text-center font-mono text-xs text-slate-400'>{a}</div>
+								<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>{`makeBlockiesUrl`}</div>
+								<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>
+									{(fileSizeInByte / 10 ** 3).toPrecision(3)}KB
+								</div>
+							</li>
+						)
+					})}
 				</ul>
 			</div>
 		</>
