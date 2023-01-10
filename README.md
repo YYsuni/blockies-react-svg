@@ -4,7 +4,7 @@ Blockies react svg function component, blocky identicons, address-unique Ethereu
 
 You can have responsive width and height without rerendering because of SVG properties. meanwhile, it will store the result.
 
-You also can use base64 url, it is smaller(~3kb) than ethereum-blockies-base64(~16kb).
+You also can use base64 url, it is smaller(~2kb) than the canvas size(~16kb).(8x8)
 
 > the address will auto toLowerCase until set `caseSensitive` property.
 
@@ -76,4 +76,4 @@ Canvas render doesn't support arbitrary size or other customized styles.
 
 SVG is the better experience.
 
-SVG base64 url size is smaller than canvas.
+SVG base64 file size is smaller than canvas.

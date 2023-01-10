@@ -37,6 +37,13 @@
 	"license": "MIT",
 	"author": "Suni",
 	"homepage": "https://github.com/YYsuni/blockies-react-svg#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YYsuni/blockies-react-svg.git"
+	},
+	"bugs": {
+		"url": "https://github.com/YYsuni/blockies-react-svg/issues"
+	},
 	"keywords": [
 		"blockies",
 		"blocky",
