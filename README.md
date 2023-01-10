@@ -17,7 +17,7 @@ You also can use base64 url, it is smaller(~3kb) than ethereum-blockies-base64(~
 - [x] base64 url
 - [x] js compile
 - [x] demo display (github pages)
-- [ ] remove react-dom/server dependence (~70kb bundle size)
+- [x] remove react-dom/server dependence (~70kb bundle size)
 - [ ] svg mirror optmization (reduce image size)
 - [ ] svg polygon optmization (reduce image size)
 - [ ] more shapes
