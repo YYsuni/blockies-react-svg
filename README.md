@@ -48,7 +48,7 @@ import BlockiesSvg from 'blockies-react-svg'
   />
 ```
 
-### 2. Use Base64 URL:
+### 2. Use Base64 URL(browser/nodejs):
 
 ```tsx
 import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
