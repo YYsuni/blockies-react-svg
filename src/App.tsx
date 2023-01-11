@@ -17,42 +17,55 @@ function App() {
 	return (
 		<>
 			<h1 className='mt-10 text-center text-3xl font-semibold'>React SVG Blockies Examples</h1>
-			<div className='mx-auto mt-8 flex flex-col gap-y-6 p-6'>
+			<div className='mx-auto mt-8 flex flex-col gap-y-6 p-6 text-xs'>
 				<ul className='flex justify-center gap-6'>
-					{ADDRESSES.map(a => (
-						<li key={a} className='max-w-[160px] flex-1'>
+					<li className='max-w-[160px] flex-1'>
+						<div>
+							<BlockiesSvg address={''} className='h-full w-full rounded-lg' />
+						</div>
+						<div className='two-lines mt-4 w-full break-all text-center font-mono text-slate-400'>empty</div>
+						<div className='break-all text-center font-mono font-semibold text-slate-400'>{`<BlockiesSvg />`}</div>
+					</li>
+					{ADDRESSES.map((a, i) => (
+						<li className='max-w-[160px] flex-1' key={a}>
 							<div>
-								<BlockiesSvg address={a} className='h-full w-full rounded-lg' />
+								<BlockiesSvg address={a} scale={10 + i * 10} className='h-full w-full rounded-lg' />
 							</div>
-							<div className='two-lines mt-4 w-full break-all text-center font-mono text-xs text-slate-400'>{a}</div>
-							<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>{`<BlockiesSvg />`}</div>
+							<div className='two-lines mt-4 w-full break-all text-center font-mono text-slate-400'>{a}</div>
+							<div className='break-all text-center font-mono font-semibold text-slate-400'>{`<BlockiesSvg />`}</div>
 						</li>
 					))}
 				</ul>
 				<ul className='flex justify-center gap-6'>
-					{ADDRESSES.map(a => (
-						<li key={a} className='max-w-[160px] flex-1'>
+					<li className='max-w-[160px] flex-1'>
+						<div>
+							<BlockiesSvgSync address={''} className='h-full w-full rounded-lg' />
+						</div>
+						<div className='two-lines mt-4 w-full break-all text-center font-mono text-slate-400'>empty</div>
+						<div className='break-all text-center font-mono font-semibold text-slate-400'>{`<BlockiesSvg />`}</div>
+					</li>
+					{ADDRESSES.map((a, i) => (
+						<li className='max-w-[160px] flex-1' key={a}>
 							<div>
-								<BlockiesSvgSync address={a} className='h-full w-full rounded-lg' />
+								<BlockiesSvgSync address={a} scale={10 + i * 10} className='h-full w-full rounded-lg' />
 							</div>
-							<div className='two-lines mt-4 w-full break-all text-center font-mono text-xs text-slate-400'>{a}</div>
-							<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>{`<BlockiesSvgSync />`}</div>
+							<div className='two-lines mt-4 w-full break-all text-center font-mono text-slate-400'>{a}</div>
+							<div className='break-all text-center font-mono font-semibold text-slate-400'>{`<BlockiesSvgSync />`}</div>
 						</li>
 					))}
 				</ul>
 				<ul className='flex justify-center gap-6'>
-					{ADDRESSES.map(a => {
-						const url = makeBlockiesUrl(a)
+					{ADDRESSES.map((a, i) => {
+						const url = makeBlockiesUrl(a, 8, false, 10 + i * 10)
 						const fileSizeInByte = Math.ceil(url.length / 4) * 3
-
 						return (
-							<li key={a} className='max-w-[160px] flex-1'>
+							<li className='max-w-[160px] flex-1' key={a}>
 								<div>
 									<img src={url} className='h-full w-full rounded-lg' />
 								</div>
-								<div className='two-lines mt-4 w-full break-all text-center font-mono text-xs text-slate-400'>{a}</div>
-								<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>{`makeBlockiesUrl`}</div>
-								<div className='break-all text-center font-mono text-sm font-semibold text-slate-400'>
+								<div className='two-lines mt-4 w-full break-all text-center font-mono text-slate-400'>{a}</div>
+								<div className='break-all text-center font-mono font-semibold text-slate-400'>{`makeBlockiesUrl`}</div>
+								<div className='break-all text-center font-mono font-semibold text-slate-400'>
 									{(fileSizeInByte / 10 ** 3).toPrecision(3)}KB
 								</div>
 							</li>
