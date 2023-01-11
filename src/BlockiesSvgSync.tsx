@@ -7,6 +7,8 @@ export default function BlockiesSvgSync(
 	props: { address: string; size?: number; scale?: number; caseSensitive?: boolean } & React.SVGProps<SVGSVGElement>
 ) {
 	let { address, size = 8, caseSensitive = false, ...rest } = props
+	if (!address) return <svg {...rest} width={size * 10} height={size * 10} xmlns='http://www.w3.org/2000/svg' />
+
 	let opts: BlockiesOptions | null = null
 	let imageData: number[] | null = null
 
