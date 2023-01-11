@@ -43,6 +43,9 @@ import BlockiesSvg from 'blockies-react-svg'
 
 <BlockiesSvg 
   address={address}
+//size={8}
+//scale={10}
+//caseSensitive={false}
   className='classname'
   style={styles} 
   />
@@ -57,6 +60,12 @@ import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
 // (The path to the file may have change, please check it when error happen.)
 
 <img src={makeBlockiesUrl(address)} />
+
+// Parameters:
+// 1. address: string
+// 2. size: number (default 8)
+// 3. caseSensitive: boolean (default false)
+// 4. scale: number (default 10)
 ```
 
 ### 3. Use React Sync Component:
@@ -69,6 +78,9 @@ import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
 
 <BlockiesSvgSync 
   address={address} 
+//size={8}
+//scale={10}
+//caseSensitive={false}
   className='classname'
   style={styles} 
   />
