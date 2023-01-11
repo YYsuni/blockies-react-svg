@@ -61,13 +61,13 @@ export function createImageData(size: number) {
 	return data
 }
 
-export function buildOpts(opts: { seed: string; size?: number }) {
+export function buildOpts(opts: { seed: string; size?: number; scale?: number }) {
 	seedrand(opts.seed)
 
 	const newOpts: BlockiesOptions = {
 		seed: opts.seed,
 		size: opts.size || 8,
-		scale: 10,
+		scale: opts.scale || 10,
 		color: createColor(),
 		bgcolor: createColor(),
 		spotcolor: createColor()
