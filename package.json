@@ -1,11 +1,11 @@
 {
-	"name": "blockies-react-svg",
+	"name": "blockies-base64-svg",
 	"version": "0.0.10",
-	"description": "Blockies react SVG function component, blocky identicons, address-unique ethereum avatar, SVG base64 generation in browser or nodejs.",
-	"main": "dist/cjs/BlockiesSvg.js",
+	"description": "SVG Blockies base64 generation in browser or nodejs.",
+	"main": "dist/cjs/makeBlockiesUrl.js",
 	"type": "module",
-	"module": "dist/es/BlockiesSvg.js",
-	"brower": "dist/es/BlockiesSvg.js",
+	"module": "dist/es/makeBlockiesUrl.js",
+	"brower": "dist/es/makeBlockiesUrl.js",
 	"scripts": {
 		"prepare": "husky install",
 		"prebuild": "npm run clean",
@@ -18,18 +18,12 @@
 		"@rollup/plugin-commonjs": "^24.0.0",
 		"@rollup/plugin-node-resolve": "^15.0.1",
 		"@types/node": "^18.11.18",
-		"@types/react": "^18.0.26",
-		"@types/react-dom": "^18.0.10",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.1.0",
 		"prettier": "^2.8.2",
-		"react": "^18.2.0",
 		"rollup": "^3.9.1",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"rollup-plugin-typescript2": "^0.34.1"
-	},
-	"peerDependencies": {
-		"react": ">=16.8.0"
 	},
 	"files": [
 		"src",
@@ -37,7 +31,7 @@
 	],
 	"license": "MIT",
 	"author": "Suni",
-	"homepage": "https://github.com/YYsuni/blockies-react-svg#readme",
+	"homepage": "https://github.com/YYsuni/blockies-react-svg/tree/base64#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/YYsuni/blockies-react-svg.git"

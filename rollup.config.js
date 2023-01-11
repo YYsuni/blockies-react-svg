@@ -7,7 +7,7 @@ const plugins = [external(), typescript(), nodeResolve(), commonjs()]
 
 /** @type {import('rollup').InputOption} */
 export default {
-	input: ['src/BlockiesSvg.tsx', 'src/BlockiesSvgSync.tsx', 'src/makeBlockiesUrl.ts'],
+	input: 'src/makeBlockiesUrl.ts',
 	output: [
 		{
 			dir: 'dist/cjs',
