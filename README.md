@@ -1,12 +1,13 @@
 # blockies-react-svg
 
-Blockies react svg function component, blocky identicons, address-unique Ethereum avatar, svg base64 url.
+Blockies react SVG function component, blocky identicons, address-unique ethereum avatar, SVG base64 generation in browser or nodejs.
 
-You can have responsive width and height without rerendering because of SVG properties. meanwhile, it will store the result.
+It allows you to use responsive width and height without rerendering because of SVG properties, and it will store the result.
 
-You also can use base64 url, it is smaller(~2kb) than the canvas size(~16kb).(8x8)
 
-> the address will auto toLowerCase until set `caseSensitive` property.
+Base64 url is smaller(~2kb) than the canvas size(~16kb), so it is suitable for server-side rendering.(8x8)
+
+> The address will automatically be converted to lower case until you set the `caseSensitive` property.
 
 ![Sample of generated blockies](sample.png "Blockies")
 
@@ -17,8 +18,8 @@ You also can use base64 url, it is smaller(~2kb) than the canvas size(~16kb).(8x
 - [x] base64 url
 - [x] js compile
 - [x] demo display (github pages)
-- [x] pure base64 (remove react-dom/server dependence, -70kb bundle size)
-- [ ] support nodejs
+- [x] pure base64 (remove react-dom/server dependence, ~70kb bundle size)
+- [x] support nodejs
 - [ ] svg mirror optmization (reduce image size)
 - [ ] svg polygon optmization (reduce image size)
 - [ ] more shapes
@@ -30,13 +31,15 @@ You also can use base64 url, it is smaller(~2kb) than the canvas size(~16kb).(8x
 $ npm i blockies-react-svg
 ```
 
+## Usage
+
 ### 1. Use React FC:
 
 ```tsx
 import BlockiesSvg from 'blockies-react-svg'
-// or use tsx directly:
+// Or use tsx directly:
 // import BlockiesSvg from 'blockies-react-svg/src/BlockiesSvg.tsx'
-// (file path may be change, please check it when error happen.)
+// (The path to the file may have change, please check it when error happen.)
 
 <BlockiesSvg 
   address={address}
@@ -45,13 +48,24 @@ import BlockiesSvg from 'blockies-react-svg'
   />
 ```
 
-### 2. Use React Sync Component:
+### 2. Use Base64 URL:
+
+```tsx
+import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
+// Or use ts directly:
+// import makeBlockiesUrl from 'blockies-react-svg/src/makeBlockiesUrl.ts'
+// (The path to the file may have change, please check it when error happen.)
+
+<img src={makeBlockiesUrl(address)} />
+```
+
+### 3. Use React Sync Component:
 
 ```tsx
 import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
 // or use tsx directly:
 // import BlockiesSvgSync from 'blockies-react-svg/src/BlockiesSvgSync.tsx'
-// (file path may be change, please check it when error happen.)
+// (The path to the file may have change, please check it when error happen.)
 
 <BlockiesSvgSync 
   address={address} 
@@ -60,21 +74,11 @@ import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
   />
 ```
 
-### 3. Use Base64 URL:
-
-```tsx
-import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
-// or use ts directly:
-// import makeBlockiesUrl from 'blockies-react-svg/src/makeBlockiesUrl.ts'
-// (file path may be change, please check it when error happen.)
-
-<img src={makeBlockiesUrl(address)} />
-```
 
 ## Why SVG?
 
-Canvas render doesn't support arbitrary size or other customized styles.
+1. Canvas render doesn't support arbitrary size or other customized styles.
 
-SVG is the better experience, because of the infinite resolution.
+2. SVG is the better experience, because of the infinite resolution.
 
-SVG base64 file size is smaller than canvas.
+3. SVG file size is smaller than canvas.
