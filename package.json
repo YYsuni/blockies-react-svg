@@ -1,7 +1,7 @@
 {
 	"name": "blockies-base64-svg",
 	"version": "0.0.10",
-	"description": "SVG Blockies base64 generation in browser or nodejs.",
+	"description": "Tiny SVG Blockies lib, output tiny base64 url in browser or nodejs.",
 	"main": "dist/cjs/makeBlockiesUrl.js",
 	"type": "module",
 	"module": "dist/es/makeBlockiesUrl.js",
