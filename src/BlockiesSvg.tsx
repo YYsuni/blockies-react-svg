@@ -9,13 +9,6 @@ export default function BlockiesSvg(
 	let { address, size = 8, scale = 10, caseSensitive = false, ...rest } = props
 	const width = size * scale
 
-	if (!address)
-		return (
-			<svg {...rest} width={width} height={width} viewBox={`0 0 ${width} ${width}`} xmlns='http://www.w3.org/2000/svg'>
-				<rect width={width} height={width} fill='black' />
-			</svg>
-		)
-
 	const [opts, setOpts] = useState<BlockiesOptions | null>(null)
 	const [imageData, setImageData] = useState<number[] | null>(null)
 
@@ -36,6 +29,13 @@ export default function BlockiesSvg(
 			}
 		}
 	}, [address])
+
+	if (!address)
+		return (
+			<svg {...rest} width={width} height={width} viewBox={`0 0 ${width} ${width}`} xmlns='http://www.w3.org/2000/svg'>
+				<rect width={width} height={width} fill='black' />
+			</svg>
+		)
 
 	if (opts && imageData) {
 		return (
