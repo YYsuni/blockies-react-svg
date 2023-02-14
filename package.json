@@ -1,11 +1,12 @@
 {
 	"name": "blockies-react-svg",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"description": "Blockies react SVG function component, blocky identicons, address-unique ethereum avatar, SVG base64 generation in browser or nodejs.",
-	"main": "dist/cjs/BlockiesSvg.js",
+	"main": "dist/cjs/BlockiesSvg.cjs",
 	"type": "module",
-	"module": "dist/es/BlockiesSvg.js",
-	"brower": "dist/es/BlockiesSvg.js",
+	"types": "dist/BlockiesSvg",
+	"module": "dist/es/BlockiesSvg.mjs",
+	"brower": "dist/es/BlockiesSvg.mjs",
 	"scripts": {
 		"prepare": "husky install",
 		"prebuild": "npm run clean",

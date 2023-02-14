@@ -54,7 +54,7 @@ import BlockiesSvg from 'blockies-react-svg'
 ### 2. Use Base64 URL(browser/nodejs):
 
 ```tsx
-import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
+import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.mjs'
 // Or use ts directly:
 // import makeBlockiesUrl from 'blockies-react-svg/src/makeBlockiesUrl.ts'
 // (The path to the file may have change, please check it when error happen.)
@@ -71,7 +71,7 @@ import makeBlockiesUrl from 'blockies-react-svg/dist/es/makeBlockiesUrl.js'
 ### 3. Use React Sync Component:
 
 ```tsx
-import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.js'
+import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.mjs'
 // or use tsx directly:
 // import BlockiesSvgSync from 'blockies-react-svg/src/BlockiesSvgSync.tsx'
 // (The path to the file may have change, please check it when error happen.)

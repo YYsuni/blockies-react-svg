@@ -3,7 +3,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 
-const plugins = [external(), typescript(), nodeResolve(), commonjs()]
+const plugins = [external(), typescript({ useTsconfigDeclarationDir: true }), nodeResolve(), commonjs()]
 
 /** @type {import('rollup').InputOption} */
 export default {
@@ -12,12 +12,16 @@ export default {
 		{
 			dir: 'dist/cjs',
 			format: 'cjs',
-			sourcemap: true
+			sourcemap: true,
+			entryFileNames: '[name].cjs',
+			chunkFileNames: '[name]-[hash].cjs'
 		},
 		{
 			dir: 'dist/es',
 			format: 'es',
-			sourcemap: true
+			sourcemap: true,
+			entryFileNames: '[name].mjs',
+			chunkFileNames: '[name]-[hash].mjs'
 		}
 	],
 	plugins
