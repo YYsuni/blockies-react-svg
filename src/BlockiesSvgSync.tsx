@@ -4,15 +4,21 @@ import { BlockiesOptions, buildOpts, createImageData } from './blockies'
 const store: Record<string, { opts: BlockiesOptions; imageData: number[] }> = Object.create(null)
 
 export default function BlockiesSvgSync(
-	props: { address: string; size?: number; scale?: number; caseSensitive?: boolean } & React.SVGProps<SVGSVGElement>
+	props: {
+		address: string
+		size?: number
+		scale?: number
+		caseSensitive?: boolean
+		defaultBackgroundColor?: string
+	} & React.SVGProps<SVGSVGElement>
 ) {
-	let { address, size = 8, scale = 10, caseSensitive = false, ...rest } = props
+	let { address, size = 8, scale = 10, caseSensitive = false, defaultBackgroundColor = 'black', ...rest } = props
 	const width = size * scale
 
 	if (!address)
 		return (
 			<svg {...rest} width={width} height={width} viewBox={`0 0 ${width} ${width}`} xmlns='http://www.w3.org/2000/svg'>
-				<rect width={width} height={width} fill='black' />
+				<rect width={width} height={width} fill={defaultBackgroundColor} />
 			</svg>
 		)
 

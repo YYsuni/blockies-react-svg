@@ -46,6 +46,7 @@ import BlockiesSvg from 'blockies-react-svg'
 //size={8}
 //scale={10}
 //caseSensitive={false}
+//defaultBackgroundColor="black"
   className='classname'
   style={styles} 
   />
@@ -81,6 +82,7 @@ import BlockiesSvgSync from 'blockies-react-svg/dist/es/BlockiesSvgSync.mjs'
 //size={8}
 //scale={10}
 //caseSensitive={false}
+//defaultBackgroundColor="black"
   className='classname'
   style={styles} 
   />
