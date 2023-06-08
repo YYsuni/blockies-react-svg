@@ -1,5 +1,17 @@
 # blockies-react-svg
 
+<p >
+  <a href="https://www.npmjs.com/package/blockies-react-svg" target="_blank">
+    <img src="https://img.shields.io/npm/v/blockies-react-svg" />
+  </a>
+  <a href="https://www.npmjs.com/package/blockies-react-svg" target="_blank">
+    <img src="https://img.shields.io/npm/dm/blockies-react-svg.svg" />
+  </a>
+    <a href="https://github.com/YYsuni/blockies-react-svg/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/npm/l/blockies-react-svg.svg">
+  </a>
+</p>
+
 Blockies react SVG function component, blocky identicons, address-unique ethereum avatar, SVG base64 generation in browser or nodejs.
 
 It allows you to use responsive width and height without rerendering because of SVG properties, and it will store the result.
