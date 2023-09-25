@@ -8,7 +8,7 @@ type ResultType = 'svg' | 'imageDataUrl'
 
 export default function makeBlockiesUrl(
 	address: string,
-	type: ResultType = 'svg',
+	type: ResultType = 'imageDataUrl',
 	size = 8,
 	caseSensitive = false,
 	scale = 10
