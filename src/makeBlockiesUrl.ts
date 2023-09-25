@@ -4,7 +4,15 @@ const store: Record<string, string> = Object.create(null)
 
 const _btoa = btoa || window?.btoa || ((str: string) => Buffer.from(str, 'binary').toString('base64'))
 
-export default function makeBlockiesUrl(address: string, size = 8, caseSensitive = false, scale = 10) {
+type ResultType = 'svg' | 'imageDataUrl'
+
+export default function makeBlockiesUrl(
+	address: string,
+	type: ResultType = 'svg',
+	size = 8,
+	caseSensitive = false,
+	scale = 10
+) {
 	if (!address) throw new Error('Address is required')
 	if (!caseSensitive) address = address.toLowerCase()
 
@@ -46,6 +54,7 @@ export default function makeBlockiesUrl(address: string, size = 8, caseSensitive
 			</g>
 		</svg>`
 
+	if (type === 'svg') return svgMarkup
 	const base64Url = `data:image/svg+xml;base64,${_btoa(svgMarkup)}`
 
 	store[`${size}:${address}`] = base64Url
