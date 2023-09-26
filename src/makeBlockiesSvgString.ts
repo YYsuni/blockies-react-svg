@@ -1,12 +1,12 @@
 import { BlockiesOptions, buildOpts, createImageData } from './blockies'
 
-const store: Record<string, string> = Object.create(null)
+const svgMarkupStore: Record<string, string> = Object.create(null)
 
 export default function makeBlockiesSvgString(address: string, size = 8, caseSensitive = false, scale = 10) {
 	if (!address) throw new Error('Address is required')
 	if (!caseSensitive) address = address.toLowerCase()
 
-	if (store[`${size}:${address}`]) return store[`${size}:${address}`]
+	if (svgMarkupStore[`${size}:${address}`]) return svgMarkupStore[`${size}:${address}`]
 
 	const opts: BlockiesOptions = buildOpts({ seed: address, size, scale })
 	const imageData: number[] = createImageData(opts.size)
@@ -41,7 +41,7 @@ export default function makeBlockiesSvgString(address: string, size = 8, caseSen
 					.join('')}
 			</g>
 		</svg>`
-	store[`${size}:${address}`] = svgMarkup
+	svgMarkupStore[`${size}:${address}`] = svgMarkup
 
 	return svgMarkup
 }
