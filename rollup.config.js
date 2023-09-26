@@ -7,7 +7,7 @@ const plugins = [external(), typescript({ useTsconfigDeclarationDir: true }), no
 
 /** @type {import('rollup').InputOption} */
 export default {
-	input: ['src/BlockiesSvg.tsx', 'src/BlockiesSvgSync.tsx', 'src/makeBlockiesUrl.ts'],
+	input: ['src/index.ts', 'src/BlockiesSvg.tsx', 'src/BlockiesSvgSync.tsx', 'src/makeBlockiesUrl.ts'],
 	output: [
 		{
 			dir: 'dist/cjs',

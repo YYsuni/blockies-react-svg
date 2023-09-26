@@ -23,7 +23,7 @@ Base64 url is smaller(~2kb) than the canvas size(~16kb), so it is suitable for s
 
 ![Sample of generated blockies](sample.png "Blockies")
 
-[**Demo of React SPA**](https://yysuni.github.io/blockies-react-svg/) (you can read the code in the `gh-pages` branch)
+[**Demo of React SPA**](https://yysuni.github.io/blockies-react-svg/)
 
 ## Todo
 - [x] ts component

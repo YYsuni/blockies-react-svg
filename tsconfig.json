@@ -13,7 +13,10 @@
 		"sourceMap": true,
 		"declaration": true,
 		"baseUrl": ".",
-		"declarationDir": "./dist"
+		"declarationDir": "./dist",
+		"paths": {
+			"tslib": ["./node_modules/tslib/tslib.d.ts"]
+		}
 	},
 	"include": ["./src"],
 	"exclude": ["./node_modules", "./test"]
