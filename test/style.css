@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.svg-string svg {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}

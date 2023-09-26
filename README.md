@@ -35,7 +35,7 @@ $ npm i blockies-react-svg
 
 
 ```tsx
-import { BlockiesSvg, BlockiesSvgSync, makeBlockiesUrl } from 'blockies-react-svg'
+import { BlockiesSvg, BlockiesSvgSync, makeBlockiesUrl, makeBlockiesSvgString } from 'blockies-react-svg'
 
 // <BlockiesSvgSync 
 <BlockiesSvg 
@@ -49,6 +49,8 @@ import { BlockiesSvg, BlockiesSvgSync, makeBlockiesUrl } from 'blockies-react-sv
   />
 
 <img src={makeBlockiesUrl(address)} />
+
+<div dangerouslySetInnerHTML={{ __html: makeBlockiesSvgString(address) }} />
 
 ```
 
