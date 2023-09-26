@@ -30,11 +30,15 @@ Base64 url is smaller(~2kb) than the canvas size(~16kb), so it is suitable for s
 ```bash
 $ npm i blockies-react-svg
 ```
+```bash
+$ npm i blockies-react-svg@canary
+```
 
 ## Usage
 
 
 ```tsx
+// canary
 import { BlockiesSvg, BlockiesSvgSync, makeBlockiesUrl, makeBlockiesSvgString } from 'blockies-react-svg'
 
 // <BlockiesSvgSync 
